@@ -1,10 +1,16 @@
 @import '_variables';
 
+@import '_normalize';
+
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/utilities";
+@import "bootstrap/grid";
+
 @import '_global';
-@import '_bootstrap';
 @import '_layout';
 @import '_typography';
-@import '_normalize';
 
 @import 'pages/_home';
 @import 'pages/_discover';
