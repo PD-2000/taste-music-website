@@ -13,31 +13,88 @@
 		href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
 		rel="stylesheet"
 	>
-
+	<link
+		rel="stylesheet"
+		type="text/css"
+		href="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/css/green-audio-player.min.css"
+	>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header class="header">
-		<div class="hero-image">
-			<div class="hero-text">
-				<h1>T A S T E</h1>
-				<h3>ENGAGE</h3>
-				<h3>IN</h3>
-				<h3>ART</h3>
+	<header class="splash">
+		<div class="container">
+			<div class="header">
+				<div class="splash-inner">
+					<h1 class="title">TASTE</h1>
+					<h3 class="subtitle">ENGAGE</h3>
+					<h3 class="subtitle">IN</h3>
+					<h3 class="subtitle">ART</h3>
+				</div>
 			</div>
 		</div>
 	</header>
-	<div id="pages">
-		<section id="home">
-			<div id="home-wrapper" class="home-wrapper container"></div>
+
+	<section class="navigation">
+		<div class="container-nav">
+			<div class="nav">
+				<ul class="nav-ul">
+					<li class="nav-li page-btn active" id="home">HOME</li>
+					<li class="nav-li page-btn" id="search">SEARCH</li>
+					<li class="nav-li page-btn" id="discover">DISCOVER</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section class="home page active-page">
+		<section class="content">
+			<div class="container-content">
+				<div class="wrapper-home">
+					<!-- PLAYER GOES HERE -->
+				</div>
+			</div>
 		</section>
-		<section id="search">
-			<div id="search-wrapper" class="search-wrapper container"></div>
+
+		<section class="subscribe">
+			<div class="subscribe-wrapper">
+				<span class="subscribe-span">
+					SUBSCRIBE 
+					<span class="subscribe-span-bold">
+						NOW
+					</span>
+				</span>
+				<button class="subscribe-btn" type="submit">
+					JOIN NOW
+				</button>
+				<img class="artist-img" src="../images/artist.jpg" alt="artist">
+				<div class="img-description">
+					<span class="artist-name">
+						Dean </span>
+					<span class="artist-lastname">
+						Hen<span class="artist-lastname-red">son</span>
+					</span>
+				</div>
+				<div class="album">
+					<span class="album-name">
+						NEW ALBUM
+					</span>
+					<span class="album-description">
+						Available only for subscribers
+					</span>
+				</div>
+			</div>
 		</section>
-		<section id="discover">
-			<div id="discover-wrapper" class="discover-wrapper container"></div>
-		</section>
-	</div>
+	</section>
+
+	<section class="search page">
+		
+	</section>
+
+	<section class="discover page">
+
+	</section>
+
+	<script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
 	<script id="template-home" type="text/x-handlebars-template">
 		
 	</script>
@@ -47,5 +104,6 @@
 	<script id="template-discover" type="text/x-handlebars-template">
 
 	</script>
+	<script src="js/script.js" type="module"></script>
 </body>
 </html>

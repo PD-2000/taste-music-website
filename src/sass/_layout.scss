@@ -11,3 +11,57 @@ Mogłaby to być np. klasa dająca jakiś mały padding z góry i dołu elementu
 Oczywiście jeśli pojawią się jakieś kolory czy czcionki, to ich wartości/nazwy warto już teraz zapisywać w pliku _variables.scss,
 a tutaj w _layout.scss tylko wykorzystywać.
 */
+// HEADER
+.header {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-image: url(../images/background.jpg);
+	background-size: cover;
+	background-position: center;
+	box-shadow: inset 0px -250px 175px $color-dark;
+
+	.title {
+		margin-right: -30px;
+		margin-bottom: 10px;
+	}
+	
+	.subtitle {
+		margin-right: 5px;
+		padding-bottom: 20px;
+	}
+}
+
+.splash-inner {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+// NAVIGATION
+.container-nav {
+	max-width: 1200px;
+	height: 5vh;
+	margin: 0 auto;
+
+	.nav {
+		height: 100%;
+		width: 500px;
+		margin: 0 auto;
+
+		.nav-ul {
+			list-style: none;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+
+			.nav-li:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
