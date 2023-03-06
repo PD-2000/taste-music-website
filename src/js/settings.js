@@ -3,7 +3,7 @@ export const select = {
 		home: '#template-home',
 		search: '#template-search',
 		discover: '#template-discover',
-		player: '#template-player',
+		player: '#template-player'
 	},
 	containerOf: {
 		pages: '#pages',
