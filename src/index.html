@@ -33,24 +33,33 @@
 			</div>
 		</div>
 	</header>
+	
+	<div class="main-nav">
+		<a href="#home">HOME</a>
+		<a href="#search">SEARCH</a>
+		<a href="#discover">DISCOVER</a>
+	</div>
 
-	<section class="navigation">
-		<div class="container-nav">
-			<div class="nav">
-				<ul class="nav-ul">
-					<li class="nav-li page-btn active" id="home">HOME</li>
-					<li class="nav-li page-btn" id="search">SEARCH</li>
-					<li class="nav-li page-btn" id="discover">DISCOVER</li>
-				</ul>
-			</div>
-		</div>
-	</section>
+	<div id="pages">
+		<section id="home">
+			<div id="home-wrapper" class="home-wrapper container"></div>
+		</section>
+		<section id="search">
+			<div id="search-wrapper" class="search-wrapper container"></div>
+		</section>
+		<section id="discover">
+			<div id="discover-wrapper" class="discover-wrapper container"></div>
+		</section>
+	</div>
 
-	<section class="home page active-page">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
+
+	<script id="template-home" type="text/x-handlebars-template">
 		<section class="content">
 			<div class="container-content">
 				<div class="wrapper-home">
-					<!-- PLAYER GOES HERE -->
+					<!-- GREEN AUDIO PLAYER -->
 				</div>
 			</div>
 		</section>
@@ -58,7 +67,7 @@
 		<section class="subscribe">
 			<div class="subscribe-wrapper">
 				<span class="subscribe-span">
-					SUBSCRIBE 
+					SUBSCRIBE
 					<span class="subscribe-span-bold">
 						NOW
 					</span>
@@ -84,26 +93,22 @@
 				</div>
 			</div>
 		</section>
-	</section>
-
-	<section class="search page">
-		
-	</section>
-
-	<section class="discover page">
-
-	</section>
-
-	<script src="https://cdn.jsdelivr.net/gh/greghub/green-audio-player/dist/js/green-audio-player.min.js"></script>
-	<script id="template-home" type="text/x-handlebars-template">
-		
 	</script>
+
 	<script id="template-search" type="text/x-handlebars-template">
+		<div class="container-search">
 
+		</div>
 	</script>
+
 	<script id="template-discover" type="text/x-handlebars-template">
-
+		<div class="container-discover">
+			<h1 class="h1-discover">DISCOVER</h1>
+			<span class="discover-text">Give it try!</span>
+			<!-- GREEN AUDIO PLAYER -->
+		</div>
 	</script>
+
 	<script src="js/script.js" type="module"></script>
 </body>
 </html>

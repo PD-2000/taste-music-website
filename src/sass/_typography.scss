@@ -41,24 +41,22 @@ p {
 }
 
 // NAVIGATION
-.container-nav {
+.main-nav {
 	text-align: center;
 
-	.nav .nav-ul {
-		.nav-li {
-			color: $color-mild;
-			font-size: 17px;
-			font-weight: $weight-regular;
-			letter-spacing: 1.5px;
+	a {
+		color: $color-mild;
+		font-size: 17px;
+		font-weight: $weight-regular;
+		letter-spacing: 1.5px;
 
-			&:hover {
-				color: $color-light;
-			}
-		}
-
-		.active {
+		&:hover {
 			color: $color-light;
 		}
+	}
+
+	.active {
+		color: $color-light;
 	}
 }
 
@@ -94,7 +92,7 @@ p {
 		font-weight: $weight-black;
 
 		.artist-lastname-red {
-			color: $color-main
+			color: $color-main;
 		}
 	}
 

@@ -42,26 +42,20 @@ a tutaj w _layout.scss tylko wykorzystywać.
 }
 
 // NAVIGATION
-.container-nav {
+.main-nav {
 	max-width: 1200px;
 	height: 5vh;
 	margin: 0 auto;
 
-	.nav {
+	a {
+		text-decoration: none;
 		height: 100%;
-		width: 500px;
-		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 
-		.nav-ul {
-			list-style: none;
-			height: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: space-around;
-
-			.nav-li:hover {
-				cursor: pointer;
-			}
+		&:hover {
+			cursor: pointer;
 		}
 	}
 }
