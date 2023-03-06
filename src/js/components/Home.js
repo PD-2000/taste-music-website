@@ -7,7 +7,6 @@ class Home{
 
 		thisHome.app = app;
 		thisHome.render(element);
-		thisHome.initActions();
 	}
 	render(element){
 		const thisHome = this;
@@ -19,18 +18,6 @@ class Home{
 
 		thisHome.dom = {};
 		thisHome.dom.wrapper = element;
-		thisHome.dom.homeHeader = document.querySelector(select.home.homeHeader);
-	}
-	initActions(){
-		const thisHome = this;
-
-		thisHome.dom.homeHeader.addEventListener('click', function(event){
-			event.preventDefault();
-			let pageId = event.target.offsetParent.getAttribute(select.home.dataId);
-
-			if(pageId)
-				thisHome.app.activatePage(pageId);
-		});
 	}
 }
 
