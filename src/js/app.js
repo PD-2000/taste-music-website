@@ -55,6 +55,11 @@ const app = {
 	// 	const playerElem = document.querySelector(select.containerOf.player);
 
 	// 	thisApp.playerElem = new MusicPlayer(playerElem, thisApp);
+
+	// GreenAudioPlayer.init({
+	// 	selector: '.player', // inits Green Audio Player on each audio container that has class "player"
+	// 	stopOthersOnPlay: true
+	// });
 	// },
 	initHome: function(){
 		const thisApp = this;
@@ -84,10 +89,5 @@ const app = {
 		thisApp.initDiscover();
 	}
 };
-
-// GreenAudioPlayer.init({
-// 	selector: '.player', // inits Green Audio Player on each audio container that has class "player"
-// 	stopOthersOnPlay: true
-// });
 
 app.init();

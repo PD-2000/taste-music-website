@@ -19,11 +19,12 @@ a tutaj w _layout.scss tylko wykorzystywać.
 	background-image: url(../images/background.jpg);
 	background-size: cover;
 	background-position: center;
-	box-shadow: inset 0px -250px 175px $color-dark;
+	box-shadow: inset -150px 0px 100px -100px $color-dark, inset 150px -250px 100px -100px $color-dark,;
 
 	.title {
 		margin-right: -30px;
 		margin-bottom: 10px;
+		position: relative;
 	}
 	
 	.subtitle {
@@ -43,16 +44,19 @@ a tutaj w _layout.scss tylko wykorzystywać.
 
 // NAVIGATION
 .main-nav {
-	max-width: 1200px;
-	height: 5vh;
+	max-width: 400px;
+	height: 10vh;
 	margin: 0 auto;
+	display: flex;
+	justify-content: center;
 
 	a {
 		text-decoration: none;
 		height: 100%;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: center;
 
 		&:hover {
 			cursor: pointer;
