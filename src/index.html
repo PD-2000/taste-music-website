@@ -59,7 +59,7 @@
 		<div class="container-home">
 			<section class="content">
 				<div class="container-content">
-					<div class="wrapper-home">
+					<div class="home-player-wrapper">
 						<!-- GREEN AUDIO PLAYER -->
 					</div>
 				</div>
@@ -114,9 +114,19 @@
 		</div>
 	</script>
 
-	<!-- <script id="template-player" type="text/x-handlebars-template">
-
-	</script> -->
+	<script id="template-player" type="text/x-handlebars-template">
+		<h4 class='author-name-title'>{{ author }} - {{ title }}</h4>
+		<div class="player">
+			<audio>
+				{{{fileUrl}}}
+				<source>
+			</audio>
+		</div>
+		<div class="player-info">
+			<span class='categories'>Categories: {{categories}}</span>
+			<span class='ranking'>#{{ranking}} in the ranking</span>
+		</div>
+	</script>
 
 	<script src="js/app.js" type="module"></script>
 </body>

@@ -1,11 +1,11 @@
-import {select, classNames} from './settings.js';
+import {select, classNames, db} from './settings.js';
 import Home from './components/Home.js';
 import Search from './components/Search.js';
 import Discover from './components/Discover.js';
-// import MusicPlayer from './components/Discover.js';
+// import MusicPlayer from './components/MusicPlayer.js';
 
 const app = {
-	initPages: function(){
+	initNavigation: function(){
 		const thisApp = this;
 
 		thisApp.pages = document.querySelector(select.containerOf.pages).children;
@@ -27,14 +27,10 @@ const app = {
 			link.addEventListener('click', function(event){
 				event.preventDefault();
 				const clickedElement = this;
-				
-				// get page id from href attribute
 				const id = clickedElement.getAttribute('href').replace('#', '');
 
-				// run activatePage with this id
 				thisApp.activatePage(id);
 
-				// change URL hash
 				window.location.hash = '#/' + id;
 			});
 		}
@@ -42,51 +38,29 @@ const app = {
 	activatePage: function(pageId){
 		const thisApp = this;
 
-		// add 'active' class to matching pages, remove from non-matching ones
 		for(let page of thisApp.pages)
 			page.classList.toggle(classNames.pages.active, page.id == pageId);
-		
-		// add 'active' class to matching links, remove from non-matching ones
 		for(let link of thisApp.navLinks)
 			link.classList.toggle(classNames.nav.active, link.getAttribute('href') == '#' + pageId);
 	},
-	// initMusicPlayer: function(){
-	// 	const thisApp = this;
-	// 	const playerElem = document.querySelector(select.containerOf.player);
+	initPages: function(){
+		const url = db.url + '/' + db.songs;
 
-	// 	thisApp.playerElem = new MusicPlayer(playerElem, thisApp);
-
-	// GreenAudioPlayer.init({
-	// 	selector: '.player', // inits Green Audio Player on each audio container that has class "player"
-	// 	stopOthersOnPlay: true
-	// });
-	// },
-	initHome: function(){
-		const thisApp = this;
-		const homeElem = document.querySelector(select.containerOf.home);
-
-		thisApp.homeElem = new Home(homeElem, thisApp);
-	},
-	initSearch: function(){
-		const thisApp = this;
-		const searchElem = document.querySelector(select.containerOf.search);
-
-		thisApp.searchElem = new Search(searchElem, thisApp);
-	},
-	initDiscover: function(){
-		const thisApp = this;
-		const discoverElem = document.querySelector(select.containerOf.discover);
-
-		thisApp.discoverElem = new Discover(discoverElem, thisApp);
+		fetch(url)
+			.then(function(response){
+				return response.json();
+			})
+			.then(function(data){
+				new Home(data);
+				new Search(data);
+				new Discover(data);
+			});
 	},
 	init: function(){
 		const thisApp = this;
 
+		thisApp.initNavigation();
 		thisApp.initPages();
-		// thisApp.initMusicPlayer();
-		thisApp.initHome();
-		thisApp.initSearch();
-		thisApp.initDiscover();
 	}
 };
 

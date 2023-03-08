@@ -19,7 +19,7 @@ a tutaj w _layout.scss tylko wykorzystywać.
 	background-image: url(../images/background.jpg);
 	background-size: cover;
 	background-position: center;
-	box-shadow: inset -150px 0px 100px -100px $color-dark, inset 150px -250px 100px -100px $color-dark,;
+	box-shadow: inset -150px 0px 100px -100px $color-dark, inset 150px -250px 100px -100px $color-dark;
 
 	.title {
 		margin-right: -30px;

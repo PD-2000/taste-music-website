@@ -2,22 +2,16 @@ import {templates, select} from '../settings.js';
 import utils from '../utils.js';
 
 class Search{
-	constructor(element, app){
+	constructor(){
 		const thisSearch = this;
 
-		thisSearch.app = app;
-		thisSearch.render(element);
+		thisSearch.render();
 	}
-	render(element){
-		const thisSearch = this;
+	render(){
 		const generatedHTML = templates.searchPage();
 		const searchContainer = document.querySelector(select.containerOf.search);
 
-		thisSearch.element = utils.createDOMFromHTML(generatedHTML);
-		searchContainer.appendChild(thisSearch.element).innerHTML;
-
-		thisSearch.dom = {};
-		thisSearch.dom.wrapper = element;
+		searchContainer.appendChild(utils.createDOMFromHTML(generatedHTML)).innerHTML;
 	}
 }
 

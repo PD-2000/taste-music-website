@@ -2,22 +2,17 @@ import {templates, select} from '../settings.js';
 import utils from '../utils.js';
 
 class Discover{
-	constructor(element, app){
+	constructor(){
 		const thisDiscover = this;
 
-		thisDiscover.app = app;
-		thisDiscover.render(element);
+		thisDiscover.render();
 	}
-	render(element){
-		const thisDiscover = this;
+	render(){
 		const generatedHTML = templates.discoverPage();
 		const discoverContainer = document.querySelector(select.containerOf.discover);
 
-		thisDiscover.element = utils.createDOMFromHTML(generatedHTML);
-		discoverContainer.appendChild(thisDiscover.element).innerHTML;
+		discoverContainer.appendChild(utils.createDOMFromHTML(generatedHTML)).innerHTML;
 
-		thisDiscover.dom = {};
-		thisDiscover.dom.wrapper = element;
 	}
 }
 
