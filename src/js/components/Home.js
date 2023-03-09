@@ -8,20 +8,19 @@ class Home{
 		const activeCategories = [];
 
 		thisHome.render();
-		thisHome.initPlayer(songs, activeCategories);
+		thisHome.renderPlayer(songs, activeCategories);
 	}
-	initPlayer(songs, activeCategories){
+	renderPlayer(songs, activeCategories){
 		const playerContainer = document.querySelector(select.containerOf.playerHome);
 
 		for(let song of songs){
-			const songFileUrl = '<source src="./songs/' + song.filename + '" type="audio/mpeg">';
 			const templateData = {
 				title: song.title,
 				author: song.author,
 				categories: song.categories,
 				ranking: song.ranking,
 				file: song.filename,
-				fileUrl: songFileUrl
+				fileUrl: '<source src="./songs/' + song.filename + '" type="audio/mpeg">'
 			};
 
 			if(activeCategories.length > 0){

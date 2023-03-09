@@ -7,8 +7,12 @@ export const select = {
 		home: '.home-wrapper',
 		pages: '#pages',
 		player: '.player',
+		playerDiscover: '.discover-player-wrapper',
+		playerDiscoverSelector: '.discover-player-wrapper .player',
 		playerHome: '.home-player-wrapper',
 		playerHomeSelector: '.home-player-wrapper .player',
+		playerSearch: '.search-player-wrapper',
+		playerSearchSelector: '.search-player-wrapper .player',
 		search: '.search-wrapper'
 	},
 	nav: {

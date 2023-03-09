@@ -1,5 +1,6 @@
 import {templates, select} from '../settings.js';
 import utils from '../utils.js';
+//import MusicPlayer from './MusicPlayer.js';
 
 class Search{
 	constructor(){
