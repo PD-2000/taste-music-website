@@ -13,10 +13,16 @@ export const select = {
 		playerHomeSelector: '.home-player-wrapper .player',
 		playerSearch: '.search-player-wrapper',
 		playerSearchSelector: '.search-player-wrapper .player',
-		search: '.search-wrapper'
+		search: '.search-wrapper',
+		searchCategories: 'search_select',
+		searchResultsNumber: '.search-results-number'
 	},
 	nav: {
 		links: '.main-nav a'
+	},
+	search: {
+		form: '.search-form',
+		input: '#search_input'
 	},
 	templateOf: {
 		discover: '#template-discover',

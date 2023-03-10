@@ -12,6 +12,7 @@ class Home{
 	}
 	renderPlayer(songs, activeCategories){
 		const playerContainer = document.querySelector(select.containerOf.playerHome);
+		let html = '';
 
 		for(let song of songs){
 			const templateData = {
@@ -19,8 +20,7 @@ class Home{
 				author: song.author,
 				categories: song.categories,
 				ranking: song.ranking,
-				file: song.filename,
-				fileUrl: '<source src="./songs/' + song.filename + '" type="audio/mpeg">'
+				file: song.filename
 			};
 
 			if(activeCategories.length > 0){
@@ -28,11 +28,13 @@ class Home{
 					const songToDisplay = song.categories.includes(activeCategory);
 
 					if(songToDisplay)
-						playerContainer.innerHTML += templates.greenAudioPlayer(templateData);
+						html += templates.greenAudioPlayer(templateData);
 				}
 			}else
-				playerContainer.innerHTML += templates.greenAudioPlayer(templateData);
+				html += templates.greenAudioPlayer(templateData);
 		}
+
+		playerContainer.innerHTML = html;
 
 		new MusicPlayer(select.containerOf.playerHomeSelector);
 	}

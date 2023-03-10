@@ -2,7 +2,6 @@ import {select, classNames, db} from './settings.js';
 import Home from './components/Home.js';
 import Search from './components/Search.js';
 import Discover from './components/Discover.js';
-// import MusicPlayer from './components/MusicPlayer.js';
 
 const app = {
 	initNavigation: function(){
@@ -40,6 +39,7 @@ const app = {
 
 		for(let page of thisApp.pages)
 			page.classList.toggle(classNames.pages.active, page.id == pageId);
+			
 		for(let link of thisApp.navLinks)
 			link.classList.toggle(classNames.nav.active, link.getAttribute('href') == '#' + pageId);
 	},

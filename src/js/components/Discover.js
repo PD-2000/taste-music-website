@@ -22,8 +22,7 @@ class Discover{
 				author: song.author,
 				categories: song.categories,
 				ranking: song.ranking,
-				file: song.filename,
-				fileUrl: '<source src="./songs/' + song.filename + '" type="audio/mpeg">'
+				file: song.filename
 			};
 			
 			if(song.id == randomSongId){

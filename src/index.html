@@ -102,9 +102,28 @@
 	</script>
 
 	<script id="template-search" type="text/x-handlebars-template">
-		<div class="container-search">
+		<div id="search" class="container-search">
 			<h1>SEARCH</h1>
-			<h2>SEARCH</h2>
+			<div class="search-area">
+				<div>
+					<h3 class="search-name">Title/Author</h3>
+				</div>
+				<div>
+					<form class="search-form">
+						<input type="text" id="search_input" class="placeholder">
+						<select name="songs" id="search_select">
+							<option value="clean"></option>
+						</select>
+						<input type="submit" value="search" class="search-button">
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="search-results-number"></div>
+			</div>
+			<div class="search-player-wrapper">
+				<!-- GREEN AUDIO PLAYER -->
+			</div>
 		</div>
 	</script>
 
@@ -119,10 +138,10 @@
 	</script>
 
 	<script id="template-player" type="text/x-handlebars-template">
-		<h4 class='author-name-title'>{{ author }} - {{ title }}</h4>
+		<h4 class='author-name-title'>{{author}} - {{title}}</h4>
 		<div class="player">
 			<audio>
-				{{{fileUrl}}}
+				<source src="./songs/{{{file}}}" type="audio/mpeg">
 				<source>
 			</audio>
 		</div>
